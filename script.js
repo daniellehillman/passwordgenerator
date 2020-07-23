@@ -16,7 +16,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-  let passwordLength = parseInt(prompt("What length do you want your password?"))
+  let passwordLength = parseInt(prompt("What length do you want your password? Must be between 8-128 characters"))
 
   if ((passwordLength > 128) || (passwordLength < 8)) {
     alert("Wrong. Please start over by clicking 'Generate Password'.")
@@ -35,22 +35,22 @@ function generatePassword() {
   let passwordFinal = ""
 
 
-  let lowercase = confirm("Do you want a lower case?")
+  let lowercase = confirm("Do you want a lower case? Yes = OK ; No = Cancel")
   if (lowercase === true) {
     thepassword += lowerHouse
   }
 
-  let uppercase = confirm("Do you want a upper case?")
+  let uppercase = confirm("Do you want a upper case? Yes = OK ; No = Cancel")
   if (uppercase === true) {
     thepassword += upperHouse 
   } 
   
-  let numberz = confirm("Do you want a number")
+  let numberz = confirm("Do you want a number? Yes = OK ; No = Cancel")
   if (numberz === true) {
     thepassword += numbers 
   }
 
-  let specialCharacters = confirm("Do you want a special Character?")
+  let specialCharacters = confirm("Do you want a special character? Yes = OK ; No = Cancel")
   if (specialCharacters === true) {
     thepassword += specialChar
   }
@@ -62,14 +62,9 @@ function generatePassword() {
 
 
   // alerting user with their password 
-alert(passwordFinal)
-
-
-document.getElementById("password").value = passwordFinal
-
+return passwordFinal
 
 }
-
 
 
 
