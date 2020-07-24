@@ -34,6 +34,7 @@ function generatePassword() {
   // string that the for loop adds to after randomizing 
   let passwordFinal = ""
 
+// asking the user for character types to include. if yes, that string is added above to thepassword 
 
   let lowercase = confirm("Do you want a lower case? Yes = OK ; No = Cancel")
   if (lowercase === true) {
@@ -56,12 +57,13 @@ function generatePassword() {
   }
 
 
+  // randomly selecting characters based on how long the user wants the password to be 
   for (var i=0; i < passwordLength; i++){
   passwordFinal = passwordFinal + thepassword.charAt(Math.floor(Math.random() * Math.floor(thepassword.length-1)));
   }
 
 
-  // alerting user with their password 
+  // giving the user the password on the page
 return passwordFinal
 
 }
